@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="dimacs2BDD",  # Der Name des Projekts
-    version="0.1",  # Versionsnummer
+    name="pydimacs2BDD",  # Der Name des Projekts
+    version="0.2",  # Versionsnummer
     packages=find_packages(),  # Findet alle Pakete automatisch
     install_requires=[],  # Abhängigkeiten, falls vorhanden
     description="A dimacs to BDD Docker project",  # Kurze Beschreibung

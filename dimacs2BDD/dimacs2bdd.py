@@ -21,4 +21,4 @@ def convert_dimacs_to_bdd(input_dimacs, output_folder):
     pylogic2bdd_main()
 
 # Beispielaufruf der Funktion
-convert_dimacs_to_bdd("/home/jahns/BDD_Docker/test_data/Mendonca2009.dimacs", "output")
+#convert_dimacs_to_bdd("/home/jahns/BDD_Docker/test_data/Mendonca2009.dimacs", "output")
