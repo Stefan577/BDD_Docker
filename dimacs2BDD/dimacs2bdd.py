@@ -1,8 +1,8 @@
 import subprocess
 import os
 import sys
-from dimagic.dimagic import main as dimagic_main
-from Logic2BDD.pylogic2bdd import main as pylogic2bdd_main
+from .dimagic.dimagic import main as dimagic_main
+from .Logic2BDD.pylogic2bdd import main as pylogic2bdd_main
 
 
 def convert_dimacs_to_bdd(input_dimacs, output_folder):

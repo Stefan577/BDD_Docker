@@ -1,7 +1,6 @@
 import argparse
 import concurrent.futures
 from enum import StrEnum, auto
-import math
 import multiprocessing
 import os
 import platform
@@ -9,9 +8,8 @@ import random
 import subprocess
 import sys
 
-import dimagic.hypergraph
-from dimagic.cnf import CNF, from_dimacs
-from dimagic.utils import Timer, file_or_dir_name, human_duration
+from .cnf import CNF, from_dimacs
+from .utils import Timer, file_or_dir_name, human_duration
 
 __version__ = "0.0.1"
 

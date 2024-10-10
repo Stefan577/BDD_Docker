@@ -1,0 +1,1 @@
+from dimacs2BDD.dimacs2bdd import convert_dimacs_to_bdd
