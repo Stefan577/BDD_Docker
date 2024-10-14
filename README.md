@@ -5,6 +5,9 @@ Python Version 3.11
 It's just a mesh together from BDDSampler (https://github.com/davidfa71/BDDSampler), Extended Logic (https://github.com/davidfa71/Extending-Logic) and dimagic(https://doi.org/10.5281/zenodo.12707100) with Docker to quickly generate BDDs from dimacs. 
 BDDSampler, Extended Logic and dimagic are not from me. You can create BDDs in the dddmp Format and Sample them (random with replacement).
 
+## Install
+pip install git+https://github.com/Stefan577/BDD_Docker.git@main
+
 ## Example
 The 2 main functions are ``` convert_dimacs_to_bdd(dimacs_path, output_path) ```and ``` sample_bdd(num_samples, bdd_path) ```
 ```python
