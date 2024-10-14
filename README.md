@@ -6,7 +6,7 @@ It's just a mesh together from BDDSampler (https://github.com/davidfa71/BDDSampl
 BDDSampler, Extended Logic and dimagic are not from me. You can create BDDs in the dddmp Format and Sample them (random with replacement).
 
 ## Install
-pip install git+https://github.com/Stefan577/BDD_Docker.git@main
+``` pip install git+https://github.com/Stefan577/BDD_Docker.git@main ```
 
 ## Example
 The 2 main functions are ``` convert_dimacs_to_bdd(dimacs_path, output_path) ```and ``` sample_bdd(num_samples, bdd_path) ```
