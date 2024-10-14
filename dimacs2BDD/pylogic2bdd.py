@@ -3,7 +3,7 @@ import os
 import argparse
 import sys
 
-DOCKER_IMAGE = "sjahns/logic2bdd"
+DOCKER_IMAGE = "sjahns/bdd_docker"
 
 
 # Funktion zum Überprüfen, ob eine Datei existiert und die richtige Endung hat
@@ -37,7 +37,7 @@ def check_docker_image(client):
 # Hauptfunktion
 def main():
     # Argument-Parser erstellen
-    parser = argparse.ArgumentParser(description="Skript zum Ausführen von Logic2BDD in einem Docker-Container.")
+    parser = argparse.ArgumentParser(description="Skript zum Ausführen von BDD_Docker in einem Docker-Container.")
 
     # Übergabeparameter definieren
     parser.add_argument("folder", help="Path to var and exp file")
@@ -75,9 +75,9 @@ def main():
     name = var_file_name.split(".")[0]
 
 
-    # Logic2BDD ausführen
-    command = f"/bin/bash -c 'cd /app/Logic2BDD/bin && ./Logic2BDD /mnt/data/{var_file_name} /mnt/data/{exp_file_name} && cp /app/Logic2BDD/bin/unknown.dddmp /mnt/data/{name}.dddmp'"
-    # command = f"/bin/bash -c 'cd /app/Logic2BDD/bin && ./Logic2BDD /mnt/data/{var_file_name} mnt/data/{exp_file_name} -suffix {name}'"
+    # BDD_Docker ausführen
+    command = f"/bin/bash -c 'cd /app/BDD_Docker/bin && ./BDD_Docker /mnt/data/{var_file_name} /mnt/data/{exp_file_name} && cp /app/BDD_Docker/bin/unknown.dddmp /mnt/data/{name}.dddmp'"
+    # command = f"/bin/bash -c 'cd /app/BDD_Docker/bin && ./BDD_Docker /mnt/data/{var_file_name} mnt/data/{exp_file_name} -suffix {name}'"
     exit_code, output = container.exec_run(command)
 
     # Output anzeigen

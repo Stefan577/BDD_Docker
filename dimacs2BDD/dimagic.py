@@ -116,7 +116,7 @@ def main():
         "-l2b",
         "--logic2bdd",
         action="store_true",
-        help="also export vars and expressions in the Logic2BDD format",
+        help="also export vars and expressions in the BDD_Docker format",
     )
 
     info_group = arg_parser.add_argument_group("info parameters")
@@ -234,7 +234,7 @@ def process(args):
         print("Writing preprocessed DIMACS file to", output_file)
         cnf.to_dimacs(output_file)
 
-        # export in Logic2BDD format
+        # export in BDD_Docker format
         if args.logic2bdd:
             cnf.to_logic2bdd(output_file)
         timer.stop()
@@ -567,7 +567,7 @@ def check_docker():
         result = subprocess.run(
             ["docker", "pull", DOCKER_IMAGE], capture_output=True, text=True
         )
-        #code to download image
+        #code_logic2bdd to download image
         if result.returncode != 0:
             print(f"Error: Could not pull Image: {DOCKER_IMAGE}")
             exit(1)

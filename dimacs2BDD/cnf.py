@@ -67,7 +67,7 @@ class CNF:
 
     def to_logic2bdd(self, path: str):
         """
-        Save CNF in the Logic2BDD format:
+        Save CNF in the BDD_Docker format:
         - `.var` file with the names of the variables in order
         - `.exp` file with the clauses as expressions in order
         """
