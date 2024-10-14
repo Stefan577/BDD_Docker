@@ -59,5 +59,5 @@ def sample_bdd(number_samples, bdd_path):
     return configurations
 
 #Beispielauruf der Funktion
-sample_bdd(10, "/home/jahns/BDD_Docker/output/test_data/Mendonca2009.dddmp")
+#sample_bdd(10, "/home/jahns/BDD_Docker/output/test_data/Mendonca2009.dddmp")
 
