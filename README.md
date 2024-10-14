@@ -24,8 +24,9 @@ if not os.path.exists(bdd_path):
   convert_dimacs_to_bdd(dimacs_path, os.path.dirname(bdd_path))
 # Sampling
 configurations = sample_bdd(num_of_samples, bdd_path)
-# configurations looks like this: [[opt4, opt1, root, opt8],[opt2, opt4, root],...]
-#if you have a list of features e.g: [root, opt1, opt2, opt3, opt4,...] use following code to get a binary array of configs:
+# Configurations looks like this: [[opt4, opt1, root, opt8],[opt2, opt4, root],...]
+
+# If you have a list of features e.g: [root, opt1, opt2, opt3, opt4,...] use following code to get a binary array of configs:
 features = [root, opt1, opt2, opt3, opt4,...]
 num_configurations = len(configurations)
 num_features = len(features)
@@ -35,7 +36,4 @@ binary_array = np.zeros((num_configurations, num_features), dtype=int)
                 if feature in features:
                     feature_index = features.index(feature)
                     binary_array[i, feature_index] = 1
-
-#if you only want unique_configurtions use
-unique_configuations = np.unique(binary_array, axis=0)
 ```
