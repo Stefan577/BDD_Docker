@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 from dimacs2BDD.dimagic import main as dimagic_main
 from dimacs2BDD.pylogic2bdd import main as pylogic2bdd_main
 from dimacs2BDD.pysampleBDD import main as pysample_bdd_main
@@ -19,6 +20,14 @@ def convert_dimacs_to_bdd(input_dimacs, output_folder):
     # Setze die Argumente für pylogic2bdd und führe die Hauptfunktion aus
     sys.argv = ['pylogic2bdd.py', f"{output_folder}/{folder}", name]
     pylogic2bdd_main()
+    folder = os.path.basename(os.path.dirname(input_dimacs))
+
+    os.rename(f"{output_folder}/{folder}/{name}.dddmp", f"{output_folder}/{name}.dddmp")
+    try:
+        shutil.rmtree(f"{output_folder}/{folder}")
+    except OSError as e:
+        print("Error: %s - %s." % (e.filename, e.strerror))
+
 
 # Beispielaufruf der Funktion
 #convert_dimacs_to_bdd("/home/jahns/BDD_Docker/test_data/Mendonca2009.dimacs", "output")
