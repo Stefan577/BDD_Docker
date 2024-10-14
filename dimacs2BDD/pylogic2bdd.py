@@ -76,7 +76,7 @@ def main():
 
 
     # BDD_Docker ausführen
-    command = f"/bin/bash -c 'cd /app/BDD_Docker/bin && ./BDD_Docker /mnt/data/{var_file_name} /mnt/data/{exp_file_name} && cp /app/BDD_Docker/bin/unknown.dddmp /mnt/data/{name}.dddmp'"
+    command = f"/bin/bash -c 'cd /app/Logic2BDD/bin && ./BDD_Docker /mnt/data/{var_file_name} /mnt/data/{exp_file_name} && cp /app/BDD_Docker/bin/unknown.dddmp /mnt/data/{name}.dddmp'"
     # command = f"/bin/bash -c 'cd /app/BDD_Docker/bin && ./BDD_Docker /mnt/data/{var_file_name} mnt/data/{exp_file_name} -suffix {name}'"
     exit_code, output = container.exec_run(command)
 
